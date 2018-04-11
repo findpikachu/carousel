@@ -1,3 +1,7 @@
+body {
+    width: 300px;
+    margin: 0 auto;
+}
 img {
     width: 300px;
     height: 200px;
@@ -10,11 +14,26 @@ img {
 
     display: flex;
     align-items: flex-start;
-    transition: all .5s;
 
 }
 
 .red {
     color: red;
+}
+img {
+    transition: all .5s;
+}
+
+.images > img.current{
+    /*left: 0;*/
+    transform: translateX(0);
+    z-index: 1;
+}
+.images > img.leave{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.images > img.enter{
+    transform: translateX(100%);
 }
 

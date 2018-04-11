@@ -4,9 +4,10 @@ const SIZE = 4
 $(".buttons > span").each((index,btn) => {
     $(btn).click(() => {
         let offset = -index * WIDTH
-        $(".images").css({
+        $("img").css({
             transform: `translate(${offset}px)`
         })
+
         $(btn).addClass("red").siblings(".red").removeClass("red")
     })
 })
